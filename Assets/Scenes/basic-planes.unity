@@ -484,9 +484,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 832456634}
+        m_TargetAssemblyTypeName: PlaneRadioResonder, Assembly-CSharp
+        m_MethodName: landingApproved
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onClearedForTakeoff:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 832456634}
+        m_TargetAssemblyTypeName: PlaneRadioResonder, Assembly-CSharp
+        m_MethodName: takeoffApproved
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHoldAt:
     m_PersistentCalls:
       m_Calls: []
@@ -521,7 +545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 252722223}
   - component: {fileID: 252722225}
-  - component: {fileID: 252722224}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -543,24 +566,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 235661104}
+  - {fileID: 1495932206}
   m_Father: {fileID: 644212112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &252722224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252722222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703f5d67a9032cd47b6a40b5aed2f6ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRadius: 40
-  listenerLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &252722225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageInputField: {fileID: 1072324128}
   instructionsText: {fileID: 1846480553}
-  radioTransmitter: {fileID: 252722224}
+  radioTransmitter: {fileID: 1495932207}
 --- !u!1 &347840731
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +872,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &832456632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832456633}
+  - component: {fileID: 832456635}
+  - component: {fileID: 832456634}
+  m_Layer: 6
+  m_Name: PlaneTransmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &832456633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832456632}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1433357621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832456634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832456632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affaaaaa6ea87094a85c8f248a1ed041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioTransmitter: {fileID: 832456635}
+  landingApprovedResponse: 
+  takeoffApprovedResponse: 
+--- !u!114 &832456635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832456632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703f5d67a9032cd47b6a40b5aed2f6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 10
+  listenerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &839678535
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,9 +980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897a79c297461944db24404af695416e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenarioName: 
+  scenarioName: Departure Scenario
   triggerTime: 0
-  description: 
+  description: Triggers the departure of the plane
   actions: []
 --- !u!1 &1036290646
 GameObject:
@@ -1591,6 +1663,7 @@ Transform:
   - {fileID: 347840732}
   - {fileID: 14946027}
   - {fileID: 236692044}
+  - {fileID: 832456633}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472991445
@@ -1641,6 +1714,54 @@ MonoBehaviour:
   triggerTime: 0
   description: 
   actions: []
+--- !u!1 &1495932205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495932206}
+  - component: {fileID: 1495932207}
+  m_Layer: 0
+  m_Name: RadioTransmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495932206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495932205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 252722223}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495932207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495932205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703f5d67a9032cd47b6a40b5aed2f6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 40
+  listenerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1601704980
 GameObject:
   m_ObjectHideFlags: 0
