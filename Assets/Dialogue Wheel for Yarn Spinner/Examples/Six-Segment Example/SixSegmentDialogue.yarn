@@ -1,0 +1,61 @@
+﻿// pieces of this are based on https://github.com/YarnSpinnerTool/YarnSpinner-Unity/tree/main/Samples~/ShotReverseShot
+title: RedLizardFriend
+---
+Mitchell: Red Lizard Friend
+Red Lizard Friend: Mitchell
+Mitchell: Red Lizard Friend?
+Red Lizard Friend: Mitchell?
+
+-> Awkward family question
+    Mitchell: So I heard your dad was a jerk
+    Red Lizard Friend: yep, huge jerk
+-> Awkward species question
+    Mitchell: So I heard your species is dying
+    Red Lizard Friend: yep, we'll all be dead soon
+    Red Lizard Friend: unless someone were able to cure the disease in a sequel
+-> Awkward mercenary question
+    Mitchell: So I heard you've killed lots
+    Red Lizard Friend: yep
+    Red Lizard Friend: oh so many
+
+Mitchell: I should go
+===
+
+title: MilitaristicBirdCop
+---
+Mitchell: Hello Militaristic Bird Cop
+Militaristic Bird Cop: Hi Mitchell
+
+-> investigate #lm
+    -> Your people are militaristic #lt
+        Militaristic Bird Cop: Yes, we are
+        Militaristic Bird Cop: We have the most ships
+        Militaristic Bird Cop: Which may or may not be relevant in future games
+    -> You were a cop? #lm
+        Militaristic Bird Cop: Yes
+        Militaristic Bird Cop: Although arguably a bad one
+    -> Women are into you? #lb
+        Militaristic Bird Cop: Terrifyingly so
+        Mitchell: why?
+        Militaristic Bird Cop: I think it's the hips
+    -> I should go #rm
+-> I should go #rm
+
+Mitchell: I should go
+===
+
+title: GenericSoldier
+---
+Mitchell: Hello Generic Soldier
+Generic Soldier: Hello Boss
+Mitchell: I should go
+===
+
+title: GunMerchant
+---
+Mitchell: Who are you?
+Gun Merchant: I am the character you give money to for guns
+Mitchell: why?
+Gun Merchant: Because
+Mitchell: I should go
+===

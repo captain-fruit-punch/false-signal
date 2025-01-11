@@ -1,0 +1,5 @@
+The environment art for this sample scene is based on 'Space Kit', by Kenney.nl (https://www.kenney.nl/assets/space-kit). 
+
+These assets are licensed under a Creative Commons CC-0 license. 
+
+Huge thanks to Kenney for providing them!
